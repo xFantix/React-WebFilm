@@ -1,8 +1,7 @@
-import styled from 'styled-components'
-
-import Nav from './components/nav/Nav'
-
-
+import styled from 'styled-components';
+import Main from './components/main/Main';
+import Nav from '../src/components/nav/Nav';
+import {BrowserRouter as Router } from 'react-router-dom';
 const StyleApp = styled.div`
   min-height:100vh;
   display:flex;
@@ -13,7 +12,10 @@ const StyleApp = styled.div`
 const App =()=> {
   return (
     <StyleApp className="App">
-      <Nav/>
+      <Router>
+          <Nav/>
+          <Main/>
+      </Router>
     </StyleApp>
   );
 }
