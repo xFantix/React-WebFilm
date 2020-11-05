@@ -1,16 +1,17 @@
 import React from 'react';
-import {StyleHeader,StyleLogo,StyleNavList} from './styleNav';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {StyleNav ,StyleLogo,StyleNavList,StyleListElement} from './styleNav';
 const Nav = () => {
-    return ( 
-        <StyleHeader>
+    return (
+        <StyleNav>
             <StyleLogo>
                 <b>Your</b>Film
             </StyleLogo>
-            <ul>
-                <li></li>
-            </ul>
-        </StyleHeader>
+            <StyleNavList>
+                <li><StyleListElement exact to='/'>Start</StyleListElement></li>
+                <li><StyleListElement to="SearchFilm">Search Film</StyleListElement></li>
+                <li><StyleListElement to="Contact">Contact</StyleListElement></li>
+            </StyleNavList>
+        </StyleNav>
      );
 }
  
