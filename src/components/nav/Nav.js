@@ -1,4 +1,5 @@
 import React from 'react';
+import MobileNav from './MobileNav';
 import {StyleNav ,StyleLogo,StyleNavList,StyleListElement} from './styleNav';
 const Nav = () => {
     return (
@@ -11,6 +12,7 @@ const Nav = () => {
                 <li><StyleListElement to="SearchFilm">Search Film</StyleListElement></li>
                 <li><StyleListElement to="Contact">Contact</StyleListElement></li>
             </StyleNavList>
+            <MobileNav/>
         </StyleNav>
      );
 }
