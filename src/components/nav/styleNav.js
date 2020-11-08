@@ -41,10 +41,13 @@ export const HamburgerButton = styled.button`
     background-color: transparent;
     border: 0;
     margin: 0;
+    transform:${ props => props.positionMenu ? 'translateX(100%)' : 'translateX(0%)'};
+    transition:.3s ease-in-out;
     @media(min-width:620px){
         display:none;
     }
 `
+
 export const HamburgerBox = styled.span`
     width: 35px;
     height: 24px;
@@ -78,4 +81,47 @@ export const HamburgerInner = styled.span`
         top:10px;
         left: 0;
     }
+`
+export const HamburgerInnerExit = styled(HamburgerInner)`
+    background-color: transparent;
+    &::before{
+        transform: translateY(10px) rotate(45deg);
+    }
+    &::after{
+        transform: translateY(-10px) rotate(-45deg);
+    }
+`
+
+export const StyleMenu = styled.div`
+    display:flex;
+    height:100vh;
+    width:300px;
+    background-color:black;
+    z-index:100;
+    position:absolute;
+    top:0%;
+    right:${props=>(props.positionMenu ? "0px":"-300px")};
+    transition:.3s ease-in-out;
+    justify-content:center;
+    text-align:center;
+    align-items:center;
+    opacity:.9;
+    @media(min-width:620px){
+        display:none;
+    }
+`
+export const StyleListNav = styled.ul`
+    display:flex;
+    flex-direction:column;
+    list-style:none;
+`
+export const StyleListElementMobile = styled(NavLink)`
+    text-decoration:none;
+    font-size:30px;
+    font-family:${font};
+    cursor: pointer;
+    color:white;
+`
+export const StyleLiMobile = styled.li`
+    padding:10px 0px;
 `

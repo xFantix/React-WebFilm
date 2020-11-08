@@ -24,6 +24,7 @@ export const StyleMainContainer = styled.main`
     display:flex;
     flex-direction:column;
     justify-content:center;
+    overflow:hidden;
 `
 export const HeaderAbout = styled.h2`
     color: white;
